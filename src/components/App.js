@@ -6,6 +6,7 @@ import Navigation from "./Navigation.js"
 import Info from "./Info.js"
 import Loading from "./Loading.js"
 import Progress from "./Progress.js"
+import Buy from "./Buy.js"
 
 import TOKEN_ABI from "../abis/Token.json"
 import CROWDSALE_ABI from "../abis/Crowdsale.json"
@@ -87,6 +88,12 @@ const App = () => {
             <strong>Opening Price: </strong>
             {price} ETH
           </p>
+          <Buy
+            provider={provider}
+            price={price}
+            crowdsale={crowdsale}
+            setIsLoading={setIsLoading}
+          />
           <Progress tokensSold={tokensSold} maxTokens={maxTokens} />
         </>
       )}

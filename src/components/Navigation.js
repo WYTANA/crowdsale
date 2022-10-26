@@ -7,8 +7,8 @@ const Navigation = () => {
       <img
         alt="logo"
         src={logo}
-        width="40"
-        height="40"
+        width="50"
+        height="50"
         className="d-inline-block align-top mx-3"
       />
       <Navbar.Brand href="#">Rushmore ICO Crowdsale!</Navbar.Brand>

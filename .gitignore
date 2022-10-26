@@ -1,5 +1,6 @@
 node_modules
 .env
+build
 coverage
 coverage.json
 notes.txt
@@ -9,4 +10,3 @@ typechain-types
 #Hardhat files
 cache
 artifacts
-

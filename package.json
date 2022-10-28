@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.0",
     "chai": "^4.3.6",
+    "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
@@ -18,7 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy/localhost": "hardhat run scripts/deploy.js --network localhost",
+    "deploy/goerli": "hardhat run scripts/deploy.js --network goerli"
   },
   "author": "tlorback@gmail.com",
   "license": "ISC",

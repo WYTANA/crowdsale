@@ -4,12 +4,16 @@ const Progress = ({ maxTokens, tokensSold }) => {
   return (
     <div className="my-3">
       <ProgressBar
+        animated
+        striped
+        variant="success"
         now={(tokensSold / maxTokens) * 100}
         label={`${(tokensSold / maxTokens) * 100}%`}
+        visuallyHidden
       />
-      <p className="text-center my-3">
-        {tokensSold} / {maxTokens} Tokens Sold
-      </p>
+      <h5 className="text-center my-4">
+        {tokensSold} out of {maxTokens} RUSH Tokens have sold
+      </h5>
     </div>
   )
 }

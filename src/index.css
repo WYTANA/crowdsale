@@ -1,3 +1,4 @@
+#root,
 body,
 html {
   margin: 0;
@@ -6,7 +7,9 @@ html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  height: 100vh;
+  /* background-color: darkgray; */
+  background-image: linear-gradient(rgb(204, 203, 203), rgb(100, 100, 100));
 }
 
 code {

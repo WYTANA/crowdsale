@@ -41,7 +41,7 @@ const Buy = ({ provider, price, crowdsale, setIsLoading }) => {
         <Col>
           <Form.Control
             type="number"
-            placeholder="How many Rushmore tokens do you want to buy?"
+            placeholder="How many RUSH tokens do you want to buy?"
             onChange={(e) => setAmount(e.target.value)}
           />
         </Col>
@@ -49,7 +49,7 @@ const Buy = ({ provider, price, crowdsale, setIsLoading }) => {
           {isWaiting ? (
             <Spinner animation="border" />
           ) : (
-            <Button variant="primary" type="submit" style={{ width: "100%" }}>
+            <Button variant="success" type="submit" style={{ width: "100%" }}>
               Buy Tokens!
             </Button>
           )}

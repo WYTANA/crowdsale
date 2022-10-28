@@ -7,11 +7,13 @@ const Navigation = () => {
       <img
         alt="logo"
         src={logo}
-        width="50"
-        height="50"
+        width="60"
+        height="60"
         className="d-inline-block align-top mx-3"
       />
-      <Navbar.Brand href="#">Rushmore ICO Crowdsale!</Navbar.Brand>
+      <Navbar.Brand href="#" style={{ fontSize: "30px" }}>
+        <strong>Rushmore ICO Crowdsale!</strong>
+      </Navbar.Brand>
     </Navbar>
   )
 }

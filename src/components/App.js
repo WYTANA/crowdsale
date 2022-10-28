@@ -77,17 +77,16 @@ const App = () => {
     <Container>
       <Navigation />
       <h1 className="text-center my-4">
-        Initial Coin Offering for the Rushmore Token!
-        {/* rgb(195, 60, 67) */}
+        Initial Coin Offering for the Rushmore (RUSH) Token!
       </h1>
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <p className="text-center">
+          <h4 className="text-center">
             <strong>Opening Price: </strong>
             {price} ETH
-          </p>
+          </h4>
           <Buy
             provider={provider}
             price={price}

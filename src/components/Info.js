@@ -1,14 +1,14 @@
 const Info = ({ account, accountBalance }) => {
   return (
-    <div className="my-3">
-      <p>
-        <strong>Account: </strong>
+    <div className="my-5">
+      <h4>
+        <strong>Connected Account: </strong>
         {account}
-      </p>
-      <p>
-        <strong>Balance: </strong>
+      </h4>
+      <h4>
+        <strong>Your Balance of RUSH Tokens: </strong>
         {accountBalance}
-      </p>
+      </h4>
     </div>
   )
 }

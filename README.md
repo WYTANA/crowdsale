@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# Rushmore (RUSH) Crowdsale ICO
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This decentralized React application allows you to purchase the RUSH token with Goeli test ETH.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+The project has been deployed to fleek.co

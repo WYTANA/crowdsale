@@ -85,7 +85,7 @@ const App = () => {
         <>
           <h4 className="text-center">
             <strong>Opening Price: </strong>
-            {price} ETH
+            {price} Goerli ETH
           </h4>
           <Buy
             provider={provider}
@@ -97,7 +97,13 @@ const App = () => {
         </>
       )}
       <hr />
-      {account && <Info account={account} accountBalance={accountBalance} />}
+      {account && (
+        <Info
+          account={account}
+          accountBalance={accountBalance}
+          maxTokens={maxTokens}
+        />
+      )}
     </Container>
   )
 }

@@ -3,8 +3,8 @@ const hre = require("hardhat")
 async function main() {
   const NAME = "Rushmore Token"
   const SYMBOL = "RUSH"
-  const MAX_SUPPLY = "1000000"
-  const PRICE = hre.ethers.utils.parseUnits("0.025", "ether")
+  const MAX_SUPPLY = "100000000"
+  const PRICE = hre.ethers.utils.parseUnits("0.0025", "ether")
 
   const Token = await hre.ethers.getContractFactory("Token")
 

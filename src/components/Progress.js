@@ -4,10 +4,19 @@ const Progress = ({ maxTokens, tokensSold }) => {
   console.log()
   return (
     <div className="my-3">
-      <h5 className="text-center my-4">
+      {tokensSold > 500 ? (
+        <h5 className="text-center my-4">
+          {tokensSold / maxTokens}% of RUSH tokens are in circulation!
+        </h5>
+      ) : (
+        <h5 className="text-center my-4">
+          0% of RUSH tokens are in circulation!
+        </h5>
+      )}
+      {/* <h5 className="text-center my-4">
         {" "}
         {tokensSold / maxTokens}% of RUSH tokens are in circulation!
-      </h5>
+      </h5> */}
       <ProgressBar
         animated
         striped

@@ -9,10 +9,16 @@ const Info = ({ account, accountBalance, maxTokens }) => {
         <strong>Your Balance of RUSH Tokens: </strong>
         {accountBalance}
       </h4>
-      <h4>
-        <strong>Your percentage of the total supply: </strong>
-        {accountBalance / maxTokens}%
-      </h4>
+      {accountBalance > 500 ? (
+        <h4>
+          <strong>Your percentage of the total supply: </strong>
+          {accountBalance / maxTokens}%
+        </h4>
+      ) : (
+        <h4>
+          <strong>Your percentage of the total supply: </strong>0%
+        </h4>
+      )}
     </div>
   )
 }

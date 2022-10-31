@@ -31,12 +31,12 @@ const App = () => {
     setProvider(provider)
 
     const token = new ethers.Contract(
-      config[31337].token.address,
+      config[5].token.address,
       TOKEN_ABI,
       provider
     )
     const crowdsale = new ethers.Contract(
-      config[31337].crowdsale.address,
+      config[5].crowdsale.address,
       CROWDSALE_ABI,
       provider
     )

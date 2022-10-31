@@ -1,6 +1,6 @@
 # Rushmore (RUSH) Crowdsale ICO
 
-This decentralized React application allows you to purchase the RUSH token with Goerli test ETH.
+Connect your Metamask wallet and use the Goerli testnet to purchase RUSH tokens.
 
 Please make sure you have Goerli test Ether in your wallet.
 

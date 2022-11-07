@@ -4,7 +4,9 @@ const Loading = () => {
   return (
     <div className="text-center my-5">
       <Spinner animation="grow" />
-      <p className="my-2">Preparing data ...</p>
+      <p className="my-2">
+        Please connect Goerli account ... preparing data ...
+      </p>
     </div>
   )
 }

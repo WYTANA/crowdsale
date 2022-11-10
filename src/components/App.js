@@ -30,13 +30,15 @@ const App = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     setProvider(provider)
 
+    const { chainId } = await provider.getNetwork()
+
     const token = new ethers.Contract(
-      config[5].token.address,
+      config[chainId].token.address,
       TOKEN_ABI,
       provider
     )
     const crowdsale = new ethers.Contract(
-      config[5].crowdsale.address,
+      config[chainId].crowdsale.address,
       CROWDSALE_ABI,
       provider
     )

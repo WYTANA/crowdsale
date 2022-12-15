@@ -1,4 +1,4 @@
-const { expect, use } = require("chai")
+const { expect } = require("chai")
 const { ethers } = require("hardhat")
 
 const tokens = (n) => {
@@ -44,7 +44,7 @@ describe("Crowdsale", () => {
   })
 
   describe("Buying tokens", () => {
-    let transaction, result
+    let transaction
     let amount = tokens(10)
 
     describe("Successfully", () => {
@@ -52,7 +52,7 @@ describe("Crowdsale", () => {
         transaction = await crowdsale
           .connect(user1)
           .buyTokens(amount, { value: ether(10) })
-        result = await transaction.wait()
+        await transaction.wait()
       })
       it("transfers tokens", async () => {
         expect(await token.balanceOf(crowdsale.address)).to.equal(
@@ -88,7 +88,7 @@ describe("Crowdsale", () => {
   })
 
   describe("Sending ETH to the crowdsale contract", () => {
-    let transaction, result
+    let transaction
     let amount = ether(10)
 
     describe("Successfully", () => {
@@ -97,7 +97,7 @@ describe("Crowdsale", () => {
           to: crowdsale.address,
           value: amount,
         })
-        result = await transaction.wait()
+        await transaction.wait()
       })
 
       it("updates contracts ether balance", async () => {
@@ -113,13 +113,13 @@ describe("Crowdsale", () => {
   })
 
   describe("Updating the price", () => {
-    let transaction, result
+    let transaction
     let price = ether(2)
 
     describe("Successfully", () => {
       beforeEach(async () => {
         transaction = await crowdsale.connect(deployer).setPrice(price)
-        result = transaction.wait()
+        transaction.wait()
       })
 
       it("updates the price", async () => {
@@ -134,7 +134,7 @@ describe("Crowdsale", () => {
   })
 
   describe("Finalizing the sale", () => {
-    let transaction, result
+    let transaction
     let amount = tokens(10)
     let value = ether(10)
 
@@ -143,10 +143,10 @@ describe("Crowdsale", () => {
         transaction = await crowdsale
           .connect(user1)
           .buyTokens(amount, { value: value })
-        result = await transaction.wait()
+        await transaction.wait()
 
         transaction = await crowdsale.connect(deployer).finalize()
-        result = await transaction.wait()
+        await transaction.wait()
       })
 
       it("transfers remaining tokens to owner", async () => {
